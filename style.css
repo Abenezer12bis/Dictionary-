@@ -1,0 +1,129 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(120deg, #74ebd5, #9face6); /* Original gradient background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;
+}
+
+.app-container {
+  width: 90%;
+  max-width: 600px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50; /* Darker shade for title */
+}
+
+header p {
+  font-size: 1rem;
+  color: #7f8c8d;
+}
+
+.search-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+input,
+select,
+button {
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+}
+
+input,
+select {
+  width: 100%;
+  max-width: 230px;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.result-container {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #ecf0f1;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.result-container h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+}
+
+.result-container p {
+  font-size: 1.1rem;
+  color: #34495e;
+  line-height: 1.6;
+}
+
+.error {
+  color: #e74c3c;
+  font-size: 1.2rem;
+  margin-top: 15px;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.app-container {
+  animation: fadeIn 1s ease-out;
+}
+
+.result-container {
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Improved responsiveness */
+@media (max-width: 768px) {
+  .search-section {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .app-container {
+    padding: 20px;
+  }
+}
