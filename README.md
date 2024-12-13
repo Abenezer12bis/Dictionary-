@@ -1,0 +1,2 @@
+# Dictionary-
+Special class
